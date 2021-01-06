@@ -29,9 +29,9 @@ namespace DwFFmpeg
         /// <returns></returns>
         public static T ToObject<T>(this string json, string path = null, JsonSerializerOptions options = null)
         {
+            if (string.IsNullOrEmpty(json) || json.Trim(' ', '{', '}', '\n').Length <= 0) return default;
             var root = JsonDocument.Parse(json).RootElement;
             if (!string.IsNullOrEmpty(path)) root = root.GetProperty(path);
-            var r = root.GetRawText();
             return JsonSerializer.Deserialize<T>(root.GetRawText(), options); ;
         }
     }
