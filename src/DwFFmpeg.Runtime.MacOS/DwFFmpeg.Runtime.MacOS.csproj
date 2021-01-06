@@ -1,7 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
-
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <ReleaseVersion>1.0.0</ReleaseVersion>
+        <SubVersion>1</SubVersion>
+        <Version>$(ReleaseVersion).$(SubVersion)</Version>
+        <Authors>DwGoing</Authors>
+        <Description>DwFFmpeg</Description>
+        <PackageProjectUrl>https://github.com/Dwgoing/DwFFmpeg</PackageProjectUrl>
+    </PropertyGroup>
+    <ItemGroup>
+        <Content Include="x64\*">
+            <Pack>true</Pack>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+            <PackagePath>x64/</PackagePath>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="x86\*">
+            <Pack>true</Pack>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+            <PackagePath>x86/</PackagePath>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="build\DwFFmpeg.Runtime.MacOS.targets">
+            <Pack>true</Pack>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+            <PackagePath>build/</PackagePath>
+        </Content>
+    </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 ﻿using System;
+using DwFFmpeg;
 
 namespace _AppTest
 {
@@ -6,7 +7,18 @@ namespace _AppTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            try
+            {
+                FFprobe.ShowStream("/Users/dwgoing/Desktop/1.mp4", res =>
+                {
+
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            Console.ReadKey();
         }
     }
 }
