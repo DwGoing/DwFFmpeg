@@ -26,8 +26,6 @@ namespace DwFFmpeg
         public string Pos { get; set; }
         [JsonPropertyName("flags")]
         public string Flags { get; set; }
-        [JsonPropertyName("data")]
-        public string Data { get; set; }
     }
 
     public class FormatInfo

@@ -2,8 +2,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <ReleaseVersion>0.0.1</ReleaseVersion>
     </PropertyGroup>
     <ItemGroup>
       <Folder Include="Models\" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="CliWrap" Version="3.3.0" />
     </ItemGroup>
 </Project>
