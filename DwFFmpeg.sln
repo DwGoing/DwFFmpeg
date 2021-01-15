@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DwFFmpeg", "src\DwFFmpeg\Dw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DwFFmpeg.Runtime.MacOS", "src\DwFFmpeg.Runtime.MacOS\DwFFmpeg.Runtime.MacOS.csproj", "{CB94421C-63E7-4070-98BE-D694E19BB935}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DwFFmpeg.Runtime.Win", "src\DwFFmpeg.Runtime.Win\DwFFmpeg.Runtime.Win.csproj", "{87BBBB52-50B0-46F8-8B93-21DF702ECF51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CB94421C-63E7-4070-98BE-D694E19BB935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB94421C-63E7-4070-98BE-D694E19BB935}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB94421C-63E7-4070-98BE-D694E19BB935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87BBBB52-50B0-46F8-8B93-21DF702ECF51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87BBBB52-50B0-46F8-8B93-21DF702ECF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87BBBB52-50B0-46F8-8B93-21DF702ECF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87BBBB52-50B0-46F8-8B93-21DF702ECF51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

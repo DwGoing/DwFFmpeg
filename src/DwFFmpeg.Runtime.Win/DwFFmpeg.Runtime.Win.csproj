@@ -10,7 +10,7 @@
         <PackageProjectUrl>https://github.com/DwGoingJiang/DwFFmpeg</PackageProjectUrl>
     </PropertyGroup>
     <ItemGroup>
-        <Content Include="build\DwFFmpeg.Runtime.MacOS.targets">
+        <Content Include="build\DwFFmpeg.Runtime.Win.targets">
             <Pack>true</Pack>
             <PackageCopyToOutput>true</PackageCopyToOutput>
             <PackagePath>build/</PackagePath>

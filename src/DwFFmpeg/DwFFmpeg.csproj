@@ -3,11 +3,13 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <ReleaseVersion>0.0.1</ReleaseVersion>
+        <SubVersion>1</SubVersion>
+        <Version>$(ReleaseVersion).$(SubVersion)</Version>
+        <Authors>DwGoing</Authors>
+        <Description>DwFFmpeg</Description>
+        <PackageProjectUrl>https://github.com/DwGoingJiang/DwFFmpeg</PackageProjectUrl>
     </PropertyGroup>
     <ItemGroup>
-      <Folder Include="Models\" />
-    </ItemGroup>
-    <ItemGroup>
-      <PackageReference Include="CliWrap" Version="3.3.0" />
+        <PackageReference Include="CliWrap" Version="3.3.0" />
     </ItemGroup>
 </Project>
