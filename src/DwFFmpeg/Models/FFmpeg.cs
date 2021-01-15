@@ -35,24 +35,45 @@ namespace DwFFmpeg
         }
 
         /// <summary>
-        /// 为视频添加音频
+        /// 格式转换
         /// </summary>
-        /// <param name="videoPath"></param>
-        /// <param name="audioPath"></param>
-        /// <param name="outputPath"></param>
+        /// <param name="input"></param>
+        /// <param name="output"></param>
         /// <returns></returns>
-        public async Task<int> MergeVideoWithAudioAsync(string videoPath, string audioPath, string outputPath)
+        public async Task<int> ChangeFormat(string input, string output)
         {
             var command = BuildCommand(cmd =>
             {
                 return cmd.WithArguments(args =>
                 {
-                    args.Add("-i").Add(videoPath)
-                    .Add("-i").Add(audioPath)
+                    args.Add("-i").Add(input)
+                    .Add("-y")
+                    .Add(output);
+                });
+            });
+            var result = await command.ExecuteAsync();
+            return result.ExitCode;
+        }
+
+        /// <summary>
+        /// 为视频添加音频
+        /// </summary>
+        /// <param name="video"></param>
+        /// <param name="audio"></param>
+        /// <param name="output"></param>
+        /// <returns></returns>
+        public async Task<int> MergeVideoWithAudioAsync(string video, string audio, string output)
+        {
+            var command = BuildCommand(cmd =>
+            {
+                return cmd.WithArguments(args =>
+                {
+                    args.Add("-i").Add(video)
+                    .Add("-i").Add(audio)
                     .Add("-vcodec").Add("copy")
                     .Add("-acodec").Add("copy")
                     .Add("-y")
-                    .Add(outputPath);
+                    .Add(output);
                 });
             });
             var result = await command.ExecuteAsync();

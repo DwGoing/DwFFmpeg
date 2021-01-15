@@ -24,7 +24,8 @@ namespace _AppTest
                 //var b = f.ShowStreamsAsync("/Users/dwgoing/Desktop/918ba0e1-324e-4efa-822f-48bad33c2aec.avi").Result;
 
                 var f = new FFmpeg();
-                Console.WriteLine(f.MergeVideoWithAudioAsync("/Users/dwgoing/Desktop/918ba0e1-324e-4efa-822f-48bad33c2aec.avi", "/Users/dwgoing/Desktop/918ba0e1-324e-4efa-822f-48bad33c2aec.wmv", "/Users/dwgoing/Desktop/output.avi").Result);
+                //Console.WriteLine(f.MergeVideoWithAudioAsync("/Users/dwgoing/Desktop/918ba0e1-324e-4efa-822f-48bad33c2aec.avi", "/Users/dwgoing/Desktop/918ba0e1-324e-4efa-822f-48bad33c2aec.wmv", "/Users/dwgoing/Desktop/output.avi").Result);
+                Console.WriteLine(f.ChangeFormat("/Users/dwgoing/Desktop/output.avi", "/Users/dwgoing/Desktop/output.mp4").Result);
 
                 Console.ReadKey();
             }
